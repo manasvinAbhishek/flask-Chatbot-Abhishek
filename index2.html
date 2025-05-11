@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>🤖 Chatbot</h1>
+    <form method="post">
+        <input name="user_input" type="text" placeholder="Say something..." autofocus required>
+        <input type="submit" value="Send">
+    </form>
+    {% if user_input %}
+        <p><strong>You:</strong> {{ user_input }}</p>
+        <p><strong>Bot:</strong> {{ bot_response }}</p>
+    {% endif %}
+</body>
+</html>
